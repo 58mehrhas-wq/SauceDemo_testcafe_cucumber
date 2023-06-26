@@ -1,0 +1,48 @@
+# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  execution:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Billing testing scripts
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16.x
+        cache: 'npm'
+    - run: npm ci
+    - run: npm test
+      if: ${{ always() }}
+    - run: npm run report
+
+    - name: 'Report saving'
+      if: ${{ always() }}
+      uses: 'actions/upload-artifact@v2'
+      with:
+          name: Reports
+          path: ${{ github.workspace }}/reports
+
+    - name: 'Videos saving'
+      if: ${{ always() }}
+      uses: 'actions/upload-artifact@v2'
+      with:
+          name: Videos
+          path: ${{ github.workspace }}/videos
+
+    - name: 'Screenshots saving'
+      if: ${{ always() }}
+      uses: 'actions/upload-artifact@v2'
+      with:
+          name: Screenshots
+          path: ${{ github.workspace }}/screenshots

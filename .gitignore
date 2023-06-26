@@ -1,0 +1,8 @@
+node_modules
+reports/report
+screenshots
+videos
+.vscode
+.DS_Store
+date.txt
+reports/report.json
