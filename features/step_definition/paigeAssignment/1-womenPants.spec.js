@@ -2,6 +2,7 @@ const ActionsPage = require('../../../pages/actions.pages.js');
 const { When, Then } = require('cucumber');
 const PaigeHomePageLocator = require('../../../locators/paige/paige_homePage.locators.js');
 const PaigeWomenPantsPageLocator = require('../../../locators/paige/paige_womenPantsPage.locators.js');
+const PaigeBrooklynPageLocator = require('../../../locators/paige/paige_brooklynPage.locators.js')
 const assert = require('assert');
 
 // When I close the popup
@@ -52,3 +53,66 @@ When('I click on Brooklyn button', async function() {
     await ActionsPage.click_element(PaigeWomenPantsPageLocator.brooklynBtn())
 });
 
+// And I assert the Brooklyn title appears
+
+When('I assert the Brooklyn title appears', async function() {
+    await ActionsPage.assert_exists(PaigeBrooklynPageLocator.brooklynPageTile()) 
+});
+
+// When I select size 26
+When('I select size 26', async function() {
+    await ActionsPage.click_element(PaigeBrooklynPageLocator.size26())
+});
+
+
+// Then In Stock message appears
+Then('In Stock message appears', async function() {
+    await ActionsPage.assert_exists(PaigeBrooklynPageLocator.inStock())
+});
+
+// When I select size 33
+When('I select size 33', async function() {
+    await ActionsPage.click_element(PaigeBrooklynPageLocator.size33())
+});
+
+
+// Then Sold Out message appears
+Then('Sold Out message appears', async function() {
+    await ActionsPage.assert_exists(PaigeBrooklynPageLocator.soldOut())
+});
+
+// When I select size 29
+When('I select size 29', async function() {
+    await ActionsPage.click_element(PaigeBrooklynPageLocator.size29())
+});
+
+// Then I add it to the shopping bag
+Then('I add it to the shopping bag', async function() {
+    await ActionsPage.doubleClick_element(PaigeBrooklynPageLocator.addToShoppingBag())
+});
+
+// And The Good News Shipping message displays
+Then('The Good News Shipping message displays', async function() {
+    await ActionsPage.assert_exists(PaigeBrooklynPageLocator.goodNewsShippingMsg())
+});
+
+// Then I assert the Checkout button exists
+Then('I assert the Checkout button exists', async function() {
+    await ActionsPage.assert_exists(PaigeBrooklynPageLocator.checkoutBtn())
+});
+
+// When I hover on Checkout button
+When('I hover on Checkout button', async function() {
+    await ActionsPage.hover_element(PaigeBrooklynPageLocator.checkoutBtn())
+})
+
+
+// When I click on Checkout button
+Then('I click on Checkout button', async function() {
+    await ActionsPage.click_element(PaigeBrooklynPageLocator.checkoutBtn());
+});
+
+// And I click on Checkout As Guest
+When('I click on Checkout As Guest', async function() {
+    await ActionsPage.click_element(PaigeBrooklynPageLocator.checkoutAsGuest())
+})

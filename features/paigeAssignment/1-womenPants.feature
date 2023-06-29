@@ -16,6 +16,23 @@ Scenario: User Buys Women Pants Scenario
     Then I search for "<pantsItem>"    
     # And I wait for "10" seconds
     And I click on Brooklyn button
+    And I assert the Brooklyn title appears
+    When I select size 26
+    Then In Stock message appears
+    When I select size 33
+    Then Sold Out message appears
+    When I select size 29
+    Then I add it to the shopping bag
+    And I wait for "1" seconds
+    And The Good News Shipping message displays
+    Then I assert the Checkout button exists
+    And I wait for "1" seconds
+    When I hover on Checkout button
+    And I wait for "1" seconds
+    Then I click on Checkout button
+    And I wait for "1" seconds
+    And I click on Checkout As Guest
+
 
 
 

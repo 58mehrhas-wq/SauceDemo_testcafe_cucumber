@@ -16,9 +16,10 @@ function brooklynBtn() {
     return select('a').withText('Brooklyn Crop - Black Willow')
 }
 
+
+
 module.exports = {
     womenPantsTitle,
     searchField,
-    brooklynBtn
-
+    brooklynBtn,   
 };

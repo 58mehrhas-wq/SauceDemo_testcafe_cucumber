@@ -29,6 +29,10 @@ async function click_element(element) {
     await testController.click(element);
 }
 
+async function doubleClick_element(element) {
+    await testController.doubleClick(element);
+}
+
 async function take_screenshot() {
     return await testController.takeScreenshot()
 }
@@ -366,6 +370,7 @@ module.exports = {
     format_currency,
     navigate,
     click_element,
+    doubleClick_element,
     take_screenshot,
     execute_shell,
     type_text,
