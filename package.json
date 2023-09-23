@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js --tags @e2e --format json:reports/report.json",
-    "focus": "cucumber-js --tags @focus --format json:reports/report.json",    
+    "focus": "cucumber-js --tags @focus --format json:reports/report.json",
     "womenpants": "cucumber-js --tags @women_pants --format json:reports/report.json"
   },
   "author": "",
@@ -29,6 +29,6 @@
     "@applitools/eyes-testcafe": "^1.12.4",
     "allure-commandline": "^2.13.8",
     "multiple-cucumber-html-reporter": "^1.18.0",
-    "testcafe": "^3.0.0"
+    "testcafe": "^3.0.1"
   }
 }
