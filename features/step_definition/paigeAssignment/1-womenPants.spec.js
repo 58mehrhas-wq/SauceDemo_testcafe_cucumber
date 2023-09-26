@@ -59,9 +59,9 @@ When('I assert the Brooklyn title appears', async function() {
     await ActionsPage.assert_exists(PaigeBrooklynPageLocator.brooklynPageTile()) 
 });
 
-// When I select size 26
-When('I select size 26', async function() {
-    await ActionsPage.click_element(PaigeBrooklynPageLocator.size26())
+// When I select size 24
+When('I select size 24', async function() {
+    await ActionsPage.click_element(PaigeBrooklynPageLocator.size24())
 });
 
 
@@ -70,9 +70,9 @@ Then('In Stock message appears', async function() {
     await ActionsPage.assert_exists(PaigeBrooklynPageLocator.inStock())
 });
 
-// When I select size 33
-When('I select size 33', async function() {
-    await ActionsPage.click_element(PaigeBrooklynPageLocator.size33())
+// When I select size 27
+When('I select size 27', async function() {
+    await ActionsPage.click_element(PaigeBrooklynPageLocator.size27())
 });
 
 
@@ -81,9 +81,9 @@ Then('Sold Out message appears', async function() {
     await ActionsPage.assert_exists(PaigeBrooklynPageLocator.soldOut())
 });
 
-// When I select size 29
-When('I select size 29', async function() {
-    await ActionsPage.click_element(PaigeBrooklynPageLocator.size29())
+// When I select size 32
+When('I select size 32', async function() {
+    await ActionsPage.click_element(PaigeBrooklynPageLocator.size32())
 });
 
 // Then I add it to the shopping bag
