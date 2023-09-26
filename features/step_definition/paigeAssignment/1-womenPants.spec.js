@@ -86,7 +86,7 @@ When('I select size 32', async function() {
     await ActionsPage.click_element(PaigeBrooklynPageLocator.size32())
 });
 
-// Then I add it to the shopping bag
+// Then I add it to the shopping bag here
 Then('I add it to the shopping bag', async function() {
     await ActionsPage.doubleClick_element(PaigeBrooklynPageLocator.addToShoppingBag())
 });
