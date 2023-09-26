@@ -17,11 +17,11 @@ Scenario: User Buys Women Pants Scenario
     # And I wait for "10" seconds
     And I click on Brooklyn button
     And I assert the Brooklyn title appears
-    When I select size 26
+    When I select size 24
     Then In Stock message appears
-    When I select size 33
+    When I select size 27
     Then Sold Out message appears
-    When I select size 29
+    When I select size 32
     Then I add it to the shopping bag
     And I wait for "1" seconds
     And The Good News Shipping message displays

@@ -8,24 +8,24 @@ function brooklynPageTile() {
     return select('h1').withText('Brookly Crop - Black Willow')
 }
 
-function size26() {
-    return select('a').withText('26')
+function size24() {
+    return select('a').withText('24')
 }
 
 function inStock() {
     return select('span').withText('In Stock')
 }
 
-function size33() {
-    return select('a').withText('33')
+function size27() {
+    return select('a').withText('27')
 }
 
 function soldOut() {
     return select('span').withText('Sold Out')
 }
 
-function size29() {
-    return select('a').withText('29')
+function size32() {
+    return select('a').withText('32')
 }
 
 function addToShoppingBag() {
@@ -54,11 +54,11 @@ function checkoutAsGuest() {
 
 module.exports = {
     brooklynPageTile,
-    size26,
+    size24,
     inStock,
-    size33,
+    size27,
     soldOut,
-    size29,
+    size32,
     addToShoppingBag,
     goodNewsShippingMsg,
     checkoutItems,
