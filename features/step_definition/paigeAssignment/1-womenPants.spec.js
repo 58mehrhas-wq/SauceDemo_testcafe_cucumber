@@ -81,7 +81,7 @@ Then('Sold Out message appears', async function() {
     await ActionsPage.assert_exists(PaigeBrooklynPageLocator.soldOut())
 });
 
-// When I select size 29
+// When I select size 32
 When('I select size 32', async function() {
     await ActionsPage.click_element(PaigeBrooklynPageLocator.size32())
 });
