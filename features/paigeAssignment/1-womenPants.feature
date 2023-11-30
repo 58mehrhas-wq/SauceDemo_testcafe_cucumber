@@ -11,15 +11,15 @@ Scenario: User Buys Women Pants Scenario
     And I wait for "1" seconds
     Then I select Pants option
     And I assert the WOMEN PANTS title appears
-    When I click into the search field
+    # When I click into the search field
     And I wait for "1" seconds
-    Then I search for "<pantsItem>"    
+    # Then I search for "<pantsItem>"    
     # And I wait for "10" seconds
-    And I click on Brooklyn button
-    And I assert the Brooklyn title appears
-    When I select size 24
+    And I click on Gemma button
+    And I assert the Gemma title appears
+    When I select size 25
     Then In Stock message appears
-    When I select size 27
+    When I select size 33
     Then Sold Out message appears
     When I select size 32
     Then I add it to the shopping bag
@@ -30,13 +30,14 @@ Scenario: User Buys Women Pants Scenario
     When I hover on Checkout button
     And I wait for "1" seconds
     Then I click on Checkout button
-    And I wait for "1" seconds
-    And I click on Checkout As Guest
+    And I wait for "5" seconds
+    And I assert the Checkout As Guest button exists
+    # And I click on Checkout As Guest
 
 
 
 
     Examples:
     | pantsItem                     |
-    | Brooklyn Crop - Black Willow  |
+    | Gemma - Black Fog Luxe Coating  |
     

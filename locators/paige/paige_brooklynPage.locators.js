@@ -9,7 +9,7 @@ function brooklynPageTile() {
 }
 
 function size24() {
-    return select('a').withText('24')
+    return select('a').withText('25')
 }
 
 function inStock() {
@@ -17,7 +17,7 @@ function inStock() {
 }
 
 function size27() {
-    return select('a').withText('27')
+    return select('a').withText('33')
 }
 
 function soldOut() {
@@ -49,7 +49,7 @@ function estimatedTotal() {
 }
 
 function checkoutAsGuest() {
-    return select('div.pg-myBagOrderSummary_buttons.pg-myBagOrderSummary_section > a:nth-child(2)')
+    return select('a').withText('  CHECKOUT AS GUEST  ')
 }
 
 module.exports = {

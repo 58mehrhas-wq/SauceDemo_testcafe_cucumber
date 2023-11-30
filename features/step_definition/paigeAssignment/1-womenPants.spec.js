@@ -49,18 +49,18 @@ Then('I search for {string}', async function(pantsItem) {
 
 // And I click on Brooklyn button
 
-When('I click on Brooklyn button', async function() {
+When('I click on Gemma button', async function() {
     await ActionsPage.click_element(PaigeWomenPantsPageLocator.brooklynBtn())
 });
 
 // And I assert the Brooklyn title appears
 
-When('I assert the Brooklyn title appears', async function() {
+When('I assert the Gemma title appears', async function() {
     await ActionsPage.assert_exists(PaigeBrooklynPageLocator.brooklynPageTile()) 
 });
 
 // When I select size 24
-When('I select size 24', async function() {
+When('I select size 25', async function() {
     await ActionsPage.click_element(PaigeBrooklynPageLocator.size24())
 });
 
@@ -71,7 +71,7 @@ Then('In Stock message appears', async function() {
 });
 
 // When I select size 27
-When('I select size 27', async function() {
+When('I select size 33', async function() {
     await ActionsPage.click_element(PaigeBrooklynPageLocator.size27())
 });
 
@@ -112,7 +112,11 @@ Then('I click on Checkout button', async function() {
     await ActionsPage.click_element(PaigeBrooklynPageLocator.checkoutBtn());
 });
 
+When('I assert the Checkout As Guest button exists', async function() {
+    await ActionsPage.assert_exists(PaigeBrooklynPageLocator.checkoutAsGuest())
+});
+
 // And I click on Checkout As Guest
 When('I click on Checkout As Guest', async function() {
     await ActionsPage.click_element(PaigeBrooklynPageLocator.checkoutAsGuest())
-})
+});

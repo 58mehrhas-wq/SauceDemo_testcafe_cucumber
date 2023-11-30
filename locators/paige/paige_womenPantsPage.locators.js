@@ -13,7 +13,7 @@ function searchField() {
 }
 
 function brooklynBtn() {
-    return select('a').withText('Brooklyn Crop - Black Willow')
+    return select('img[alt="Gemma - Black Fog Luxe Coating"]')
 }
 
 
