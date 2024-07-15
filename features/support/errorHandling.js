@@ -11,6 +11,7 @@ exports.addErrorToController = function(){
             });
             return testController.testRun.errs.push(errAdapter);
     });
+    
 };
 
 exports.ifErrorTakeScreenshot = function(resolvedTestController) {
@@ -25,3 +26,4 @@ exports.ifErrorTakeScreenshot = function(resolvedTestController) {
         }
     }
 };
+

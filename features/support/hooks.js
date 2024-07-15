@@ -2,7 +2,7 @@ const fs = require('fs');
 const createTestCafe = require('testcafe');
 const ActionsPage = require('../../pages/actions.pages.js')
 const MainPageLocator = require('../../locators/main.locators.js');
-const testControllerHolder = require('./testControllerHolder');
+const testControllerHolder = require('./testControllerHolder.js');
 const { AfterAll, setDefaultTimeout, Before, After, Status, BeforeAll } = require('cucumber');
 const TIMEOUT = 60000;
 let cafeRunner = null;
@@ -87,18 +87,18 @@ After(async function () {
     testControllerHolder.free();
 });
 
-// After(async function (testCase) {
-//     if (testCase.result.status === Status.FAILED) {
-//         let screenshot = await ActionsPage.take_screenshot()
-//         this.attachScreenshotToReport(screenshot)
-//         console.log("\n" + testCase.pickle.tags[2].name)
-//         fs.appendFileSync("failed_scenarios.txt", testCase.pickle.tags[2].name + " or ", "UTF-8", { 'flags': 'a+' });
-//     }
-//     await ActionsPage.click_element(MainPageLocator.settings_button())
-//     await ActionsPage.hover_element_from_list(MainPageLocator.settings_options(), "Sign Out")
-//     await ActionsPage.click_element_from_list(MainPageLocator.settings_options(), "Sign Out")
-//     await ActionsPage.wait(2)
-// });
+After(async function (testCase) {
+    if (testCase.result.status === Status.FAILED) {
+        let screenshot = await ActionsPage.take_screenshot()
+        this.attachScreenshotToReport(screenshot)
+        console.log("\n" + testCase.pickle.tags[2].name)
+        fs.appendFileSync("failed_scenarios.txt", testCase.pickle.tags[2].name + " or ", "UTF-8", { 'flags': 'a+' });
+    }
+    // await ActionsPage.click_element(MainPageLocator.settings_button())
+    // await ActionsPage.hover_element_from_list(MainPageLocator.settings_options(), "Sign Out")
+    // await ActionsPage.click_element_from_list(MainPageLocator.settings_options(), "Sign Out")
+    // await ActionsPage.wait(2)
+});
 
 AfterAll(function () {
     let intervalId = null;
@@ -112,6 +112,7 @@ AfterAll(function () {
             cafeRunner.close();
             process.exit();
         }
+        
     }
 
     waitForTestCafe();

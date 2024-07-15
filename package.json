@@ -6,7 +6,8 @@
   "scripts": {
     "test": "cucumber-js --tags @e2e --format json:reports/report.json",
     "focus": "cucumber-js --tags @focus --format json:reports/report.json",
-    "womenpants": "cucumber-js --tags @women_pants --format json:reports/report.json"
+    "swaglabs": "cucumber-js --tags @swaglabs --format json:reports/report.json",
+    "login": "cucumber-js --tags @login --format json:reports/report.json"
   },
   "author": "",
   "license": "ISC",

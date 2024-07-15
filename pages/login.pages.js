@@ -1,10 +1,10 @@
-const LoginPageLocator = require('../locators/login.locators.js');
+const LoginPageLocator = require('../locators/login.locators');
 const ActionsPage = require("./actions.pages");
 
 
-async function email_login(email, password) {
-    await ActionsPage.type_text(LoginPageLocator.email(), email)
+async function swag_login(username, password) {
+    await ActionsPage.type_text(LoginPageLocator.username(), username)
     await ActionsPage.type_text(LoginPageLocator.password(), password)
 }
 
-module.exports.email_login = email_login;
+module.exports.swag_login = swag_login;
