@@ -13,7 +13,7 @@ function CustomWorld({attach, parameters}) {
 
     this.setBrowser = function() {
         if (parameters.browser === undefined) {
-            return 'edge';
+            return 'chrome';
         } else {
             return parameters.browser;
         }
